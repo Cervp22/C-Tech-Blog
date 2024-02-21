@@ -10,6 +10,7 @@ router.post("/signup", async (req, res) => {
     const dbUserData = await User.create({
       username: req.body.username,
       email: req.body.email,
+      fullname: req.body.fullname,
       password: req.body.password,
     });
 
@@ -67,7 +68,7 @@ router.post("/logout", (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const users = await User.findAll({
-      attributes: ["id", "username", "email"],
+      attributes: ["id", "username", "email", 'fullname'],
       include: [{ model: Reviews }],
     });
     !users

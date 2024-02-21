@@ -1,17 +1,26 @@
-<h1>Welcome, {{user.username}}</h1>
+<style>
+  #title{
+    font-size:25px;
+    display:inline-block;
+    margin-top: 10px;
+  }
+</style>
 
-<h1 class="title">Post your Review here!</h1>
+<h1 class="title" id="title">Welcome, {{user.username}}</h1>
+<p>*this page is to make post about</p>
+
+<h2 >Share whats on your mind:</h2>
 <form id="reviewform">
-  <span>Review Title:</span><br />
+  <span>Title:</span><br />
   <input type="text" id="reviewtitlecontent" />
   <br />
   <span>Content:</span>
   <textarea
-    class="textarea is-small"
+    class="textarea "
     id="reviewcontent"
-    cols="5"
-    rows="6"
-    style="width: 20%;"
+    cols="2"
+    rows="3"
+    style="width: 5%"
   ></textarea>
   <br />
   <button id="submitbtn" type="submit" class="button is-success">submit</button>
