@@ -4,11 +4,15 @@
     display:inline-block;
     margin-top: 10px;
   }
+  #submitbtn{
+    margin-top:10px;
+  }
+
 </style>
 
 <h1 class="title" id="title">Welcome, {{user.username}}</h1>
 <p>*this page is to make post about</p>
-
+<br>
 <h2 >Share whats on your mind:</h2>
 <form id="reviewform">
   <span>Title:</span><br />
@@ -22,7 +26,6 @@
     rows="3"
     style="width: 5%"
   ></textarea>
-  <br />
   <button id="submitbtn" type="submit" class="button is-success">submit</button>
 </form>
 
