@@ -44,7 +44,9 @@ router.get("/dashboard", withAuth, async (req, res) => {
     const reviewData = await Reviews.findAll({
       include: [{ model: User, attributes: ["username"] }],
     });
-    const reviews = reviewData.map((reviews) => reviews.get({ plain: true }));
+    const reviews = reviewData
+      .reverse()
+      .map((reviews) => reviews.get({ plain: true }));
     console.log(reviews);
 
     res.render("dashboard", {
