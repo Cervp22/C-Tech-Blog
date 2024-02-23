@@ -17,7 +17,7 @@
       </h1>
     </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -32,6 +32,7 @@
       <a class="navbar-item" href="/dashboard">
         Dashboard
       </a>
+      <a class="navbar-item" id="navlogout" style="color:red;">Logout</a>
         </div>
       </div>
     </div>
@@ -68,3 +69,22 @@
 
   </body>
 </html>
+<style>
+  @media screen and (max-width:500px){
+    #btn{
+      display:none;
+    }
+  }
+  @media screen and (min-width:768px){
+    #burger{
+      display:none;
+    }
+  }
+  @media screen and (min-width:1024px){
+    #navlogout{
+      display:none;
+    }
+
+  }
+</style>
+<script src="/js/main.js"></script>

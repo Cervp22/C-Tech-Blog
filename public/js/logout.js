@@ -1,5 +1,7 @@
 const logoutbtn = document.getElementById("btn");
 
+const navlogout = document.getElementById("navlogout");
+
 const logout = async () => {
   try {
     const response = await fetch("/api/users/logout", {
@@ -16,4 +18,4 @@ const logout = async () => {
 };
 
 logoutbtn.addEventListener("click", logout);
-
+navlogout.addEventListener("click", logout);
