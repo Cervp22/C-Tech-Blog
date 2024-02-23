@@ -1,36 +1,9 @@
-<style>
-  #title{
-    font-size:25px;
-    display:inline-block;
-    margin-top: 10px;
-  }
-  #submitbtn{
-    margin-top:10px;
-  }
-
-</style>
-
 <h1 class="title" id="title">Welcome, {{user.username}}</h1>
-<p>*this page is to make post about</p>
-<br>
-<h2 >Share whats on your mind:</h2>
-<form id="reviewform">
-  <span>Title:</span><br />
-  <input type="text" id="reviewtitlecontent" />
-  <br />
-  <span>Content:</span>
-  <textarea
-    class="textarea "
-    id="reviewcontent"
-    cols="2"
-    rows="3"
-    style="width: 5%"
-  ></textarea>
-  <button id="submitbtn" type="submit" class="button is-success">submit</button>
-</form>
-
+<div class="norrisdiv">
+<h2 id="norrisjoke"></h2>
+</div>
 <main id="main" class="main">
-
+<!--
 {{#each user.Reviews}}
   <article class="media">
     <figure class="media-left">
@@ -67,5 +40,26 @@
   </article>
   {{/each}}
 </main>
+-->
+<style>
+  #title{
+    font-size:25px;
+    display:inline-block;
+    margin-top: 10px;
+  }
+  #submitbtn{
+    margin-top:10px;
+  }
+  #title{
+    margin-left:100px;
+    margin-top:40px;
+  }
 
-<script src="/js/profile.js"></script>
+  #norrisjoke{
+    text-align: center;
+    margin-top:12px;
+    font-size:25px
+  }
+
+</style>
+<script src="/js/home.js"></script>

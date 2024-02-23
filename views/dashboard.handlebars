@@ -1,17 +1,32 @@
+<form id="reviewform" class="reviewform">
+  <span>Title:</span><br />
+  <input type="text" id="reviewtitlecontent" maxlength="25" />
+  <br />
+  <span>Content:</span>
+  <textarea
+    class="textarea"
+    id="reviewcontent"
+    cols="2"
+    rows="3"
+    style="width: 5%"
+    maxlength="78"
+  ></textarea>
+  <button id="submitbtn" type="submit" class="button is-success">submit</button>
+</form>
 {{#each reviews as |review|}}
   <article class="media">
     <figure class="media-left">
     </figure>
     <div class="media-content">
       <div class="content">
-        <p>
+        <p class="reviewcontent">
           <strong>{{review.review_title}}</strong>
           @<small>{{user.username}}</small>
           <br />
           {{review.review_content}}
-
         </p>
       </div>
+      <!--
       <nav class="level is-mobile">
         <div class="level-left">
           <a class="level-item">
@@ -25,8 +40,33 @@
           </a>
         </div>
       </nav>
+      -->
     </div>
     <div class="media-right">
     </div>
   </article>
 {{/each}}
+<style>
+
+  #reviewform{ width:750px; margin-left:470px } .reviewcontent{ width:750px;
+  margin-left:455px; border-radius:5px;border:solid 1px;height:80px }
+  /*-------------------------------------------------------------------------*/
+  @media screen and (max-width:1200px){ #reviewform{ width:550px;
+  margin-left:300px } .reviewcontent{ margin-left:280px; width:555px } }
+  /*---------------- IPHONE 12 --------*/ @media screen and (max-width:390px){
+  #reviewform{ background-color: red; width:280px; margin-left:50px } }
+  /*------- IPHONE 14 PRO MAX -----*/ @media screen and (max-width:430px){
+  #reviewform{ background-color: BLUE; width:330px; margin-left:50px }
+  /*------------- PIXEL 7 PHONE ----*/ } @media screen and (max-width:412px){
+  #reviewform{ background-color: red; width:310px; margin-left:50px } }
+  /*---------SAMSUNG GALAXY S8 -----*/ @media screen and (max-width:360px){
+  #reviewform{ background-color: red; width:290px; margin-left:35px } } /*------
+  IPAD MINI----*/ @media screen and (max-width:768px){ #reviewform{
+  background-color: red; width:460px; margin-left:140px } } /* ---------- GALAXY
+  FOLD ------*/ @media screen and (max-width:280px){ #reviewform{
+  background-color: red; width:265px; margin-left:20px } } /*------------- IPAD
+  PRO -----------------*/ @media screen and (max-width:1024px){ #reviewform{
+  background-color: red; width:510px; margin-left:240px } }
+
+</style>
+<script src="/js/dashboard.js"></script>

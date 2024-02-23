@@ -23,7 +23,7 @@ const submitreview = async (event) => {
     res.status(500).json({ message: "Check server side", err });
   }
 };
-
+/*
 const deleteReview = async (reviews_id) => {
   try {
     const response = await fetch(`/api/reviews/${reviews_id}`, {
@@ -49,5 +49,5 @@ const deleteReviewHandler = (event) => {
 };
 
 document.addEventListener("click", deleteReviewHandler);
-
+*/
 document.getElementById("reviewform").addEventListener("submit", submitreview);
